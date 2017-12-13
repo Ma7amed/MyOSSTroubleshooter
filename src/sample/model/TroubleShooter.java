@@ -7,6 +7,9 @@ import sample.DTO.TroubleTicket;
 import sample.model.DAO.FMDatabase;
 import sample.model.DAO.SDMDatabase;
 
+import java.io.File;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 /**
@@ -124,6 +127,17 @@ public class TroubleShooter {
     }
 
     public void getUnclearTTs() {
+
+        // INIT
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd");
+        LocalDateTime localDateTime = LocalDateTime.now();
+        String currentDate = localDateTime.format(formatter);
+
+        ExcelWritter excelWritter = new ExcelWritter();
+        File filePath = new File("D:/Work/OSS/Temp_Delete/" + currentDate + "/");
+        File filename = new File(filePath + "/Clear_TT.xlsx");
+        System.out.println("will export to: " + filename);
         // Get Unclear TTs
 
         // Get List of Alarms that are not cleared yet, or cleared but didn't send clear notification to SDM
@@ -167,6 +181,11 @@ public class TroubleShooter {
             System.out.println(ticket.getOrderid() + "," + ticket.getProcessstatus() + "," + ticket.getServerSerial());
         }
         System.out.println("Found " + unClearedTTs.size() + " unclear TTs out of " + runningTTs.size() + " running TTs");
+
+
+
+        System.out.println("Writing to " + filename);
+        excelWritter.writeClearTT(unClearedTTs,filename);
 
     }
 
@@ -230,6 +249,8 @@ public class TroubleShooter {
             System.out.println(record.getDomain() + "," + record.getAlarmName() + "," + record.getCount());
         }
         System.out.println("##########################");
+
+
     }
 
 }

@@ -11,6 +11,14 @@ public class TroubleTicket {
     private String title;
 
 
+    public static String[] HEADERS = {
+            "Ticket ID",
+            "Title",
+            "Status",
+            "Server Serial Number"
+    };
+
+
     public String getTitle() {
         return title;
     }

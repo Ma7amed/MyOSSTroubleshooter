@@ -1,3 +1,5 @@
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 /**
@@ -7,14 +9,10 @@ public class TestDrive {
 
     public static void main(String[] args) {
 
-        ArrayList<String> test = new ArrayList<>();
-        for(int i=1;i<=3500;i++) {
-            test.add(Integer.toString(i));
-        }
-        sample.Utlities.arrayToSQL_Advance(test);
-
-
-
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd");
+        LocalDateTime localDateTime = LocalDateTime.now();
+        String currentDate = localDateTime.format(formatter);
+        System.out.println("D:/Work/OSS/Temp_Delete/" + currentDate);
     }
 
     // 0 > 999, 1000 > 1999, 2000 > 2999, 3000 > max
