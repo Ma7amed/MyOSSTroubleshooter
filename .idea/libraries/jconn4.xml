@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="jconn4">
     <CLASSES>
-      <root url="jar://D:/Work/OSS/Outage Report/jconn4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jconn4.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

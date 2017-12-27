@@ -1,9 +1,16 @@
 <component name="libraryTable">
   <library name="commons-collections4-4.1">
     <CLASSES>
-      <root url="jar://D:/Java/poi.apache.org/poi-bin-3.16-20170419/poi-3.16/lib/commons-collections4-4.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/poi/commons-collections4-4.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/poi/commons-lang3-3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/poi/poi-3.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/poi/poi-ooxml-3.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/poi/poi-ooxml-schemas-3.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/poi/xmlbeans-2.6.0.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/lib/poi/poi-3.16-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>
